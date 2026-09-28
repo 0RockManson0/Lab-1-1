@@ -116,7 +116,7 @@ internal class Program
 
     private void RunTask6()
     {
-        Console.WriteLine("\n--- Задача 6: Модуль числа ---");
+        Console.WriteLine("\nЗадача 6: Модуль числа");
         Console.Write("Введите целое число x: ");
         int x = ReadInt();
         Console.WriteLine("Результат: " + Abs(x));
@@ -124,7 +124,7 @@ internal class Program
 
     private void RunTask7()
     {
-        Console.WriteLine("\n--- Задача 7: Тридцать пять ---");
+        Console.WriteLine("\nЗадача 7: Тридцать пять");
         Console.Write("Введите целое число x: ");
         int x = ReadInt();
         Console.WriteLine("Результат: " + Is35(x));
@@ -132,7 +132,7 @@ internal class Program
 
     private void RunTask8()
     {
-        Console.WriteLine("\n--- Задача 8: Тройной максимум ---");
+        Console.WriteLine("\nЗадача 8: Тройной максимум");
         Console.Write("Введите x: ");
         int x = ReadInt();
         Console.Write("Введите y: ");
@@ -144,7 +144,7 @@ internal class Program
 
     private void RunTask9()
     {
-        Console.WriteLine("\n--- Задача 9: Двойная сумма ---");
+        Console.WriteLine("\nЗадача 9: Двойная сумма");
         Console.Write("Введите x: ");
         int x = ReadInt();
         Console.Write("Введите y: ");
@@ -154,7 +154,7 @@ internal class Program
 
     private void RunTask10()
     {
-        Console.WriteLine("\n--- Задача 10: День недели ---");
+        Console.WriteLine("\nЗадача 10: День недели");
         Console.Write("Введите число x (1-7): ");
         int x = ReadInt();
         Console.WriteLine("Результат: " + Day(x));
