@@ -9,7 +9,7 @@ internal class Program
 
         while (true)
         {
-            Console.WriteLine("\n=== Лабораторная работа №1 ===");
+            Console.WriteLine("\nЛабораторная работа №1");
             Console.WriteLine("Выберите задачу (1-10) или 0 для выхода:");
             choice = ReadInt();
 
@@ -66,11 +66,9 @@ internal class Program
         }
     }
 
-    // ===== Методы запуска задач =====
-
     private void RunTask1()
     {
-        Console.WriteLine("\n--- Задача 1: Дробная часть ---");
+        Console.WriteLine("\nЗадача 1: Дробная часть");
         Console.Write("Введите число x: ");
         double x = ReadDouble();
         Console.WriteLine("Результат: " + Fraction(x));
@@ -78,7 +76,7 @@ internal class Program
 
     private void RunTask2()
     {
-        Console.WriteLine("\n--- Задача 2: Букву в число ---");
+        Console.WriteLine("\nЗадача 2: Букву в число");
         Console.Write("Введите символ (0-9): ");
         char ch = ReadDigitChar();
         Console.WriteLine("Результат: " + CharToNum(ch));
@@ -86,7 +84,7 @@ internal class Program
 
     private void RunTask3()
     {
-        Console.WriteLine("\n--- Задача 3: Двузначное ---");
+        Console.WriteLine("\nЗадача 3: Двузначное");
         Console.Write("Введите целое число: ");
         int num = ReadInt();
         Console.WriteLine("Результат: " + Is2Digits(num));
@@ -94,7 +92,7 @@ internal class Program
 
     private void RunTask4()
     {
-        Console.WriteLine("\n--- Задача 4: Диапазон ---");
+        Console.WriteLine("\nЗадача 4: Диапазон4");
         Console.Write("Введите a: ");
         int a = ReadInt();
         Console.Write("Введите b: ");
@@ -106,7 +104,7 @@ internal class Program
 
     private void RunTask5()
     {
-        Console.WriteLine("\n--- Задача 5: Равенство ---");
+        Console.WriteLine("\nЗадача 5: Равенство");
         Console.Write("Введите a: ");
         int a = ReadInt();
         Console.Write("Введите b: ");
@@ -161,8 +159,6 @@ internal class Program
         int x = ReadInt();
         Console.WriteLine("Результат: " + Day(x));
     }
-
-    // ===== Решения задач 1-5 =====
 
     private double Fraction(double x)
     {
@@ -279,8 +275,11 @@ internal class Program
     }
 
     // ===== Вспомогательные методы ввода =====
+// ===== Вспомогательные методы ввода =====
 
-    private double ReadDouble()
+// ===== Вспомогательные методы ввода =====
+// ===== Вспомогательные методы ввода =====
+    private static double ReadDouble()
     {
         string input;
         double result;
@@ -298,7 +297,7 @@ internal class Program
         }
     }
 
-    private char ReadDigitChar()
+    private static char ReadDigitChar()
     {
         while (true)
         {
@@ -313,7 +312,7 @@ internal class Program
         }
     }
 
-    private int ReadInt()
+    private static int ReadInt()
     {
         string input;
         int result;
