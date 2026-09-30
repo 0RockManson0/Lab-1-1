@@ -29,8 +29,6 @@ internal class Program
                 case 8: solver.RunTask8(); break;
                 case 9: solver.RunTask9(); break;
                 case 10: solver.RunTask10(); break;
-                
-                // === НОВЫЕ ЗАДАЧИ 11-20 ===
                 case 11: solver.RunTask11(); break;
                 case 12: solver.RunTask12(); break;
                 case 13: solver.RunTask13(); break;
@@ -48,10 +46,6 @@ internal class Program
             }
         }
     }
-
-    // ==========================================
-    // ТВОИ СУЩЕСТВУЮЩИЕ МЕТОДЫ (БЕЗ ИЗМЕНЕНИЙ)
-    // ==========================================
 
     private void RunTask1()
     {
@@ -303,8 +297,7 @@ internal class Program
         int x = ReadInt();
         Console.WriteLine("Результат: " + ArrayToString(FindAll(arr, x)));
     }
-
-    // --- Логика задач 11-15 ---
+    
 
     private string ListNums(int x)
     {
@@ -320,12 +313,11 @@ internal class Program
     private string Chet(int x)
     {
         string result = "";
-        // Шаг 2 гарантирует только четные числа, if не используется
         for (int i = 0; i <= x; i += 2)
         {
             result += i + " ";
         }
-        return result.Trim(); // Убирает последний лишний пробел
+        return result.Trim();
     }
 
     private int NumLen(long x)
@@ -364,8 +356,7 @@ internal class Program
             Console.WriteLine(spaces + stars);
         }
     }
-
-    // --- Логика задач 16-20 (Массивы) ---
+    
 
     private int FindFirst(int[] arr, int x)
     {
@@ -380,7 +371,7 @@ internal class Program
     {
         if (arr == null || arr.Length == 0) return 0;
         int maxVal = arr[0];
-        int maxAbsVal = Abs(arr[0]); // Используем твой метод Abs!
+        int maxAbsVal = Abs(arr[0]);
 
         for (int i = 1; i < arr.Length; i++)
         {
@@ -398,22 +389,19 @@ internal class Program
     {
         int[] result = new int[arr.Length + ins.Length];
         int index = 0;
-
-        // Копируем до позиции вставки
+        
         for (int i = 0; i < pos && i < arr.Length; i++)
         {
             result[index] = arr[i];
             index++;
         }
-
-        // Вставляем новый массив
+        
         for (int i = 0; i < ins.Length; i++)
         {
             result[index] = ins[i];
             index++;
         }
-
-        // Копируем остаток исходного массива
+        
         for (int i = pos; i < arr.Length; i++)
         {
             result[index] = arr[i];
@@ -435,7 +423,6 @@ internal class Program
 
     private int[] FindAll(int[] arr, int x)
     {
-        // Сначала считаем количество вхождений, чтобы создать массив нужного размера
         int count = 0;
         for (int i = 0; i < arr.Length; i++)
         {
@@ -454,10 +441,7 @@ internal class Program
         }
         return result;
     }
-
-    // ==========================================
-    // ВСПОМОГАТЕЛЬНЫЕ МЕТОДЫ ВВОДА (Твои + Новые)
-    // ==========================================
+    
 
     private static double ReadDouble()
     {
@@ -492,8 +476,7 @@ internal class Program
             Console.Write("Некорректный ввод. Введите целое число: ");
         }
     }
-
-    // Новый метод для чтения long (нужен для задачи 13)
+    
     private static long ReadLong()
     {
         string input;
@@ -505,8 +488,7 @@ internal class Program
             Console.Write("Некорректный ввод. Введите целое число: ");
         }
     }
-
-    // Новый метод для чтения массива (числа через пробел)
+    
     private static int[] ReadIntArray()
     {
         while (true)
@@ -544,8 +526,7 @@ internal class Program
             Console.WriteLine("Некорректный ввод. Введите целые числа через пробел.");
         }
     }
-
-    // Новый метод для красивого вывода массива в консоль
+    
     private static string ArrayToString(int[] arr)
     {
         if (arr == null || arr.Length == 0) return "[]";
