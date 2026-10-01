@@ -4,8 +4,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Program solver = new Program();
-        TaskSolver taskSolver = new TaskSolver();
+        TaskSolver solver = new TaskSolver();
         int choice;
 
         while (true)
@@ -13,8 +12,7 @@ internal class Program
             Console.WriteLine(
                 "\nЛабораторная работа №1");
             Console.WriteLine(
-                "Выберите задачу (1-20) " +
-                "или 0 для выхода:");
+                "Выберите задачу (1-20) или 0 для выхода:");
             choice = ReadInt();
 
             switch (choice)
@@ -23,68 +21,26 @@ internal class Program
                     Console.WriteLine(
                         "Выход из программы.");
                     return;
-
-                case 1:
-                    solver.RunTask1(taskSolver);
-                    break;
-                case 2:
-                    solver.RunTask2(taskSolver);
-                    break;
-                case 3:
-                    solver.RunTask3(taskSolver);
-                    break;
-                case 4:
-                    solver.RunTask4(taskSolver);
-                    break;
-                case 5:
-                    solver.RunTask5(taskSolver);
-                    break;
-                case 6:
-                    solver.RunTask6(taskSolver);
-                    break;
-                case 7:
-                    solver.RunTask7(taskSolver);
-                    break;
-                case 8:
-                    solver.RunTask8(taskSolver);
-                    break;
-                case 9:
-                    solver.RunTask9(taskSolver);
-                    break;
-                case 10:
-                    solver.RunTask10(taskSolver);
-                    break;
-                case 11:
-                    solver.RunTask11(taskSolver);
-                    break;
-                case 12:
-                    solver.RunTask12(taskSolver);
-                    break;
-                case 13:
-                    solver.RunTask13(taskSolver);
-                    break;
-                case 14:
-                    solver.RunTask14(taskSolver);
-                    break;
-                case 15:
-                    solver.RunTask15(taskSolver);
-                    break;
-                case 16:
-                    solver.RunTask16(taskSolver);
-                    break;
-                case 17:
-                    solver.RunTask17(taskSolver);
-                    break;
-                case 18:
-                    solver.RunTask18(taskSolver);
-                    break;
-                case 19:
-                    solver.RunTask19(taskSolver);
-                    break;
-                case 20:
-                    solver.RunTask20(taskSolver);
-                    break;
-
+                case 1: RunTask1(solver); break;
+                case 2: RunTask2(solver); break;
+                case 3: RunTask3(solver); break;
+                case 4: RunTask4(solver); break;
+                case 5: RunTask5(solver); break;
+                case 6: RunTask6(solver); break;
+                case 7: RunTask7(solver); break;
+                case 8: RunTask8(solver); break;
+                case 9: RunTask9(solver); break;
+                case 10: RunTask10(solver); break;
+                case 11: RunTask11(solver); break;
+                case 12: RunTask12(solver); break;
+                case 13: RunTask13(solver); break;
+                case 14: RunTask14(solver); break;
+                case 15: RunTask15(solver); break;
+                case 16: RunTask16(solver); break;
+                case 17: RunTask17(solver); break;
+                case 18: RunTask18(solver); break;
+                case 19: RunTask19(solver); break;
+                case 20: RunTask20(solver); break;
                 default:
                     Console.WriteLine(
                         "Неверный номер задачи. " +
@@ -94,279 +50,214 @@ internal class Program
         }
     }
 
-    private void RunTask1(TaskSolver ts)
+    private static void RunTask1(TaskSolver s)
     {
-        Console.WriteLine(
-            "\nЗадача 1: Дробная часть");
+        Console.WriteLine("\nЗадача 1: Дробная часть");
         Console.Write("Введите число x: ");
-        double x = ReadDouble();
         Console.WriteLine(
-            "Результат: " + ts.Fraction(x));
+            "Результат: " + s.Fraction(ReadDouble()));
     }
 
-    private void RunTask2(TaskSolver ts)
+    private static void RunTask2(TaskSolver s)
     {
+        Console.WriteLine("\nЗадача 2: Букву в число");
+        Console.Write("Введите символ (0-9): ");
         Console.WriteLine(
-            "\nЗадача 2: Букву в число");
-        Console.Write(
-            "Введите символ (0-9): ");
-        char ch = ReadDigitChar();
-        Console.WriteLine(
-            "Результат: " + ts.CharToNum(ch));
+            "Результат: " + s.CharToNum(ReadDigitChar()));
     }
 
-    private void RunTask3(TaskSolver ts)
+    private static void RunTask3(TaskSolver s)
     {
+        Console.WriteLine("\nЗадача 3: Двузначное");
+        Console.Write("Введите целое число: ");
         Console.WriteLine(
-            "\nЗадача 3: Двузначное");
-        Console.Write(
-            "Введите целое число: ");
-        int num = ReadInt();
-        Console.WriteLine(
-            "Результат: " + ts.Is2Digits(num));
+            "Результат: " + s.Is2Digits(ReadInt()));
     }
 
-    private void RunTask4(TaskSolver ts)
+    private static void RunTask4(TaskSolver s)
     {
-        Console.WriteLine(
-            "\nЗадача 4: Диапазон");
+        Console.WriteLine("\nЗадача 4: Диапазон");
         Console.Write("Введите a: ");
         int a = ReadInt();
         Console.Write("Введите b: ");
         int b = ReadInt();
         Console.Write("Введите num: ");
-        int num = ReadInt();
         Console.WriteLine(
-            "Результат: " +
-            ts.IsInRange(a, b, num));
+            "Результат: " + s.IsInRange(a, b, ReadInt()));
     }
 
-    private void RunTask5(TaskSolver ts)
+    private static void RunTask5(TaskSolver s)
     {
-        Console.WriteLine(
-            "\nЗадача 5: Равенство");
+        Console.WriteLine("\nЗадача 5: Равенство");
         Console.Write("Введите a: ");
         int a = ReadInt();
         Console.Write("Введите b: ");
         int b = ReadInt();
         Console.Write("Введите c: ");
-        int c = ReadInt();
         Console.WriteLine(
-            "Результат: " +
-            ts.IsEqual(a, b, c));
+            "Результат: " + s.IsEqual(a, b, ReadInt()));
     }
 
-    private void RunTask6(TaskSolver ts)
+    private static void RunTask6(TaskSolver s)
     {
-        Console.WriteLine(
-            "\nЗадача 6: Модуль числа");
-        Console.Write(
-            "Введите целое число x: ");
-        int x = ReadInt();
-        Console.WriteLine(
-            "Результат: " + ts.Abs(x));
+        Console.WriteLine("\nЗадача 6: Модуль числа");
+        Console.Write("Введите целое число x: ");
+        Console.WriteLine("Результат: " + s.Abs(ReadInt()));
     }
 
-    private void RunTask7(TaskSolver ts)
+    private static void RunTask7(TaskSolver s)
     {
-        Console.WriteLine(
-            "\nЗадача 7: Тридцать пять");
-        Console.Write(
-            "Введите целое число x: ");
-        int x = ReadInt();
-        Console.WriteLine(
-            "Результат: " + ts.Is35(x));
+        Console.WriteLine("\nЗадача 7: Тридцать пять");
+        Console.Write("Введите целое число x: ");
+        Console.WriteLine("Результат: " + s.Is35(ReadInt()));
     }
 
-    private void RunTask8(TaskSolver ts)
+    private static void RunTask8(TaskSolver s)
     {
-        Console.WriteLine(
-            "\nЗадача 8: Тройной максимум");
+        Console.WriteLine("\nЗадача 8: Тройной максимум");
         Console.Write("Введите x: ");
         int x = ReadInt();
         Console.Write("Введите y: ");
         int y = ReadInt();
         Console.Write("Введите z: ");
-        int z = ReadInt();
         Console.WriteLine(
-            "Результат: " +
-            ts.Max3(x, y, z));
+            "Результат: " + s.Max3(x, y, ReadInt()));
     }
 
-    private void RunTask9(TaskSolver ts)
+    private static void RunTask9(TaskSolver s)
     {
-        Console.WriteLine(
-            "\nЗадача 9: Двойная сумма");
+        Console.WriteLine("\nЗадача 9: Двойная сумма");
         Console.Write("Введите x: ");
         int x = ReadInt();
         Console.Write("Введите y: ");
-        int y = ReadInt();
         Console.WriteLine(
-            "Результат: " + ts.Sum2(x, y));
+            "Результат: " + s.Sum2(x, ReadInt()));
     }
 
-    private void RunTask10(TaskSolver ts)
+    private static void RunTask10(TaskSolver s)
     {
-        Console.WriteLine(
-            "\nЗадача 10: День недели");
-        Console.Write(
-            "Введите число x (1-7): ");
-        int x = ReadInt();
-        Console.WriteLine(
-            "Результат: " + ts.Day(x));
+        Console.WriteLine("\nЗадача 10: День недели");
+        Console.Write("Введите число x (1-7): ");
+        Console.WriteLine("Результат: " + s.Day(ReadInt()));
     }
 
-    private void RunTask11(TaskSolver ts)
+    private static void RunTask11(TaskSolver s)
     {
-        Console.WriteLine(
-            "\nЗадача 11: Числа подряд");
+        Console.WriteLine("\nЗадача 11: Числа подряд");
         Console.Write("Введите число x: ");
         Console.WriteLine(
-            "Результат: \"" +
-            ts.ListNums(ReadInt()) + "\"");
+            "Результат: \"" + s.ListNums(ReadInt()) + "\"");
     }
 
-    private void RunTask12(TaskSolver ts)
+    private static void RunTask12(TaskSolver s)
     {
-        Console.WriteLine(
-            "\nЗадача 12: Четные числа");
+        Console.WriteLine("\nЗадача 12: Четные числа");
         Console.Write("Введите число x: ");
         Console.WriteLine(
-            "Результат: \"" +
-            ts.Chet(ReadInt()) + "\"");
+            "Результат: \"" + s.Chet(ReadInt()) + "\"");
     }
 
-    private void RunTask13(TaskSolver ts)
+    private static void RunTask13(TaskSolver s)
     {
-        Console.WriteLine(
-            "\nЗадача 13: Длина числа");
+        Console.WriteLine("\nЗадача 13: Длина числа");
         Console.Write("Введите число x: ");
         Console.WriteLine(
-            "Результат: " +
-            ts.NumLen(ReadLong()));
+            "Результат: " + s.NumLen(ReadLong()));
     }
 
-    private void RunTask14(TaskSolver ts)
+    private static void RunTask14(TaskSolver s)
     {
-        Console.WriteLine(
-            "\nЗадача 14: Квадрат");
+        Console.WriteLine("\nЗадача 14: Квадрат");
         Console.Write("Введите размер x: ");
-        ts.Square(ReadInt());
+        s.Square(ReadInt());
     }
 
-    private void RunTask15(TaskSolver ts)
+    private static void RunTask15(TaskSolver s)
     {
         Console.WriteLine(
-            "\nЗадача 15: Правый " +
-            "треугольник");
-        Console.Write(
-            "Введите высоту x: ");
-        ts.RightTriangle(ReadInt());
+            "\nЗадача 15: Правый треугольник");
+        Console.Write("Введите высоту x: ");
+        s.RightTriangle(ReadInt());
     }
 
-    private void RunTask16(TaskSolver ts)
+    private static void RunTask16(TaskSolver s)
     {
         Console.WriteLine(
-            "\nЗадача 16: Поиск " +
-            "первого значения");
+            "\nЗадача 16: Поиск первого значения");
         Console.WriteLine(
-            "Введите элементы " +
-            "массива через пробел:");
+            "Введите элементы массива через пробел:");
         int[] arr = ReadIntArray();
-        Console.Write(
-            "Введите искомое число x: ");
-        int x = ReadInt();
+        Console.Write("Введите искомое число x: ");
         Console.WriteLine(
-            "Результат: " +
-            ts.FindFirst(arr, x));
+            "Результат: " + s.FindFirst(arr, ReadInt()));
     }
 
-    private void RunTask17(TaskSolver ts)
+    private static void RunTask17(TaskSolver s)
     {
         Console.WriteLine(
-            "\nЗадача 17: Поиск " +
-            "максимального по модулю");
+            "\nЗадача 17: Поиск максимального " +
+            "по модулю");
         Console.WriteLine(
-            "Введите элементы " +
-            "массива через пробел:");
+            "Введите элементы массива через пробел:");
         int[] arr = ReadIntArray();
-        Console.WriteLine(
-            "Результат: " +
-            ts.MaxAbs(arr));
+        Console.WriteLine("Результат: " + s.MaxAbs(arr));
     }
 
-    private void RunTask18(TaskSolver ts)
+    private static void RunTask18(TaskSolver s)
     {
         Console.WriteLine(
-            "\nЗадача 18: Добавление " +
-            "массива в массив");
+            "\nЗадача 18: Добавление массива " +
+            "в массив");
         Console.WriteLine(
-            "Введите элементы " +
-            "исходного массива arr " +
-            "через пробел:");
+            "Введите элементы исходного массива " +
+            "arr через пробел:");
         int[] arr = ReadIntArray();
         Console.WriteLine(
-            "Введите элементы " +
-            "массива ins для вставки " +
-            "через пробел:");
+            "Введите элементы массива ins для " +
+            "вставки через пробел:");
         int[] ins = ReadIntArray();
-        Console.Write(
-            "Введите позицию pos: ");
-        int pos = ReadInt();
+        Console.Write("Введите позицию pos: ");
         Console.WriteLine(
             "Результат: " +
-            ArrayToString(
-                ts.Add(arr, ins, pos)));
+            ArrayToString(s.Add(arr, ins, ReadInt())));
     }
 
-    private void RunTask19(TaskSolver ts)
+    private static void RunTask19(TaskSolver s)
     {
         Console.WriteLine(
-            "\nЗадача 19: " +
-            "Возвратный реверс");
+            "\nЗадача 19: Возвратный реверс");
         Console.WriteLine(
-            "Введите элементы " +
-            "массива через пробел:");
+            "Введите элементы массива через пробел:");
         int[] arr = ReadIntArray();
         Console.WriteLine(
             "Результат: " +
-            ArrayToString(
-                ts.ReverseBack(arr)));
+            ArrayToString(s.ReverseBack(arr)));
     }
 
-    private void RunTask20(TaskSolver ts)
+    private static void RunTask20(TaskSolver s)
     {
+        Console.WriteLine("\nЗадача 20: Все вхождения");
         Console.WriteLine(
-            "\nЗадача 20: Все вхождения");
-        Console.WriteLine(
-            "Введите элементы " +
-            "массива через пробел:");
+            "Введите элементы массива через пробел:");
         int[] arr = ReadIntArray();
-        Console.Write(
-            "Введите искомое число x: ");
-        int x = ReadInt();
+        Console.Write("Введите искомое число x: ");
         Console.WriteLine(
             "Результат: " +
-            ArrayToString(
-                ts.FindAll(arr, x)));
+            ArrayToString(s.FindAll(arr, ReadInt())));
     }
     
 
     private static double ReadDouble()
     {
-        string input;
-        double result;
         while (true)
         {
-            input = Console.ReadLine();
             if (double.TryParse(
-                input, out result))
+                Console.ReadLine(), out double result))
             {
                 return result;
             }
             Console.Write(
-                "Некорректный ввод. " +
-                "Введите число: ");
+                "Некорректный ввод. Введите число: ");
         }
     }
 
@@ -374,8 +265,7 @@ internal class Program
     {
         while (true)
         {
-            string input =
-                Console.ReadLine();
+            string input = Console.ReadLine();
             if (input != null
                 && input.Length == 1
                 && input[0] >= '0'
@@ -385,20 +275,16 @@ internal class Program
             }
             Console.Write(
                 "Некорректный ввод. " +
-                "Введите одну цифру " +
-                "(0-9): ");
+                "Введите одну цифру (0-9): ");
         }
     }
 
     private static int ReadInt()
     {
-        string input;
-        int result;
         while (true)
         {
-            input = Console.ReadLine();
             if (int.TryParse(
-                input, out result))
+                Console.ReadLine(), out int result))
             {
                 return result;
             }
@@ -410,13 +296,10 @@ internal class Program
 
     private static long ReadLong()
     {
-        string input;
-        long result;
         while (true)
         {
-            input = Console.ReadLine();
             if (long.TryParse(
-                input, out result))
+                Console.ReadLine(), out long result))
             {
                 return result;
             }
@@ -431,43 +314,35 @@ internal class Program
         while (true)
         {
             Console.Write("> ");
-            string input =
-                Console.ReadLine();
-            if (string.IsNullOrWhiteSpace(
-                input))
+            string input = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(input))
             {
                 Console.WriteLine(
-                    "Массив не может быть " +
-                    "пустым. Попробуйте " +
-                    "снова.");
+                    "Массив не может быть пустым. " +
+                    "Попробуйте снова.");
                 continue;
             }
 
-            string[] parts =
-                input.Split(' ');
+            string[] parts = input.Split(' ');
             int count = 0;
             foreach (string part in parts)
             {
-                if (!string.IsNullOrWhiteSpace(
-                    part))
+                if (!string.IsNullOrWhiteSpace(part))
                 {
                     count++;
                 }
             }
 
-            int[] result =
-                new int[count];
+            int[] result = new int[count];
             int index = 0;
             bool isValid = true;
 
             foreach (string part in parts)
             {
-                if (!string.IsNullOrWhiteSpace(
-                    part))
+                if (!string.IsNullOrWhiteSpace(part))
                 {
                     if (!int.TryParse(
-                        part,
-                        out result[index]))
+                        part, out result[index]))
                     {
                         isValid = false;
                         break;
@@ -484,17 +359,14 @@ internal class Program
         }
     }
 
-    private static string ArrayToString(
-        int[] arr)
+    private static string ArrayToString(int[] arr)
     {
-        if (arr == null
-            || arr.Length == 0)
+        if (arr == null || arr.Length == 0)
         {
             return "[]";
         }
         string result = "[";
-        for (int i = 0;
-            i < arr.Length; i++)
+        for (int i = 0; i < arr.Length; i++)
         {
             result += arr[i];
             if (i < arr.Length - 1)

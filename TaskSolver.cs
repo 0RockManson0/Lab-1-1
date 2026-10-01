@@ -2,31 +2,28 @@
 
 internal class TaskSolver
 {
-
-    internal double Fraction(double x)
+    public double Fraction(double x)
     {
         double result = x - (int)x;
         return Math.Round(result, 10);
     }
 
-    internal int CharToNum(char x)
+    public int CharToNum(char x)
     {
         return x - '0';
     }
 
-    internal bool Is2Digits(int x)
+    public bool Is2Digits(int x)
     {
         int absX = x;
         if (absX < 0)
         {
             absX = -absX;
         }
-        return absX >= 10
-            && absX <= 99;
+        return absX >= 10 && absX <= 99;
     }
 
-    internal bool IsInRange(
-        int a, int b, int num)
+    public bool IsInRange(int a, int b, int num)
     {
         int min = a;
         int max = b;
@@ -35,18 +32,15 @@ internal class TaskSolver
             min = b;
             max = a;
         }
-        return num >= min
-            && num <= max;
+        return num >= min && num <= max;
     }
 
-    internal bool IsEqual(
-        int a, int b, int c)
+    public bool IsEqual(int a, int b, int c)
     {
         return a == b && b == c;
     }
-    
 
-    internal int Abs(int x)
+    public int Abs(int x)
     {
         if (x < 0)
         {
@@ -55,7 +49,7 @@ internal class TaskSolver
         return x;
     }
 
-    internal bool Is35(int x)
+    public bool Is35(int x)
     {
         bool divBy3 = x % 3 == 0;
         bool divBy5 = x % 5 == 0;
@@ -63,8 +57,7 @@ internal class TaskSolver
             && !(divBy3 && divBy5);
     }
 
-    internal int Max3(
-        int x, int y, int z)
+    public int Max3(int x, int y, int z)
     {
         int max = x;
         if (y > max)
@@ -78,7 +71,7 @@ internal class TaskSolver
         return max;
     }
 
-    internal int Sum2(int x, int y)
+    public int Sum2(int x, int y)
     {
         int sum = x + y;
         if (sum >= 10 && sum <= 19)
@@ -88,32 +81,22 @@ internal class TaskSolver
         return sum;
     }
 
-    internal string Day(int x)
+    public string Day(int x)
     {
         switch (x)
         {
-            case 1:
-                return "понедельник";
-            case 2:
-                return "вторник";
-            case 3:
-                return "среда";
-            case 4:
-                return "четверг";
-            case 5:
-                return "пятница";
-            case 6:
-                return "суббота";
-            case 7:
-                return "воскресенье";
-            default:
-                return "это не день " +
-                    "недели";
+            case 1: return "понедельник";
+            case 2: return "вторник";
+            case 3: return "среда";
+            case 4: return "четверг";
+            case 5: return "пятница";
+            case 6: return "суббота";
+            case 7: return "воскресенье";
+            default: return "это не день недели";
         }
     }
-    
 
-    internal string ListNums(int x)
+    public string ListNums(int x)
     {
         string result = "";
         for (int i = 0; i <= x; i++)
@@ -127,18 +110,17 @@ internal class TaskSolver
         return result;
     }
 
-    internal string Chet(int x)
+    public string Chet(int x)
     {
         string result = "";
-        for (int i = 0;
-            i <= x; i += 2)
+        for (int i = 0; i <= x; i += 2)
         {
             result += i + " ";
         }
         return result.Trim();
     }
 
-    internal int NumLen(long x)
+    public int NumLen(long x)
     {
         if (x == 0)
         {
@@ -154,7 +136,7 @@ internal class TaskSolver
         return count;
     }
 
-    internal void Square(int x)
+    public void Square(int x)
     {
         string row;
         for (int i = 0; i < x; i++)
@@ -168,15 +150,14 @@ internal class TaskSolver
         }
     }
 
-    internal void RightTriangle(int x)
+    public void RightTriangle(int x)
     {
         string spaces;
         string stars;
         for (int i = 1; i <= x; i++)
         {
             spaces = "";
-            for (int j = 0;
-                j < x - i; j++)
+            for (int j = 0; j < x - i; j++)
             {
                 spaces += " ";
             }
@@ -187,17 +168,13 @@ internal class TaskSolver
                 stars += "*";
             }
 
-            Console.WriteLine(
-                spaces + stars);
+            Console.WriteLine(spaces + stars);
         }
     }
-    
 
-    internal int FindFirst(
-        int[] arr, int x)
+    public int FindFirst(int[] arr, int x)
     {
-        for (int i = 0;
-            i < arr.Length; i++)
+        for (int i = 0; i < arr.Length; i++)
         {
             if (arr[i] == x)
             {
@@ -207,10 +184,9 @@ internal class TaskSolver
         return -1;
     }
 
-    internal int MaxAbs(int[] arr)
+    public int MaxAbs(int[] arr)
     {
-        if (arr == null
-            || arr.Length == 0)
+        if (arr == null || arr.Length == 0)
         {
             return 0;
         }
@@ -218,8 +194,7 @@ internal class TaskSolver
         int maxAbsVal = Abs(arr[0]);
         int currentAbs;
 
-        for (int i = 1;
-            i < arr.Length; i++)
+        for (int i = 1; i < arr.Length; i++)
         {
             currentAbs = Abs(arr[i]);
             if (currentAbs > maxAbsVal)
@@ -231,31 +206,26 @@ internal class TaskSolver
         return maxVal;
     }
 
-    internal int[] Add(
-        int[] arr, int[] ins, int pos)
+    public int[] Add(int[] arr, int[] ins, int pos)
     {
-        int[] result =
-            new int[arr.Length
-                + ins.Length];
+        int[] result = new int[
+            arr.Length + ins.Length];
         int index = 0;
 
         for (int i = 0;
-            i < pos && i < arr.Length;
-            i++)
+            i < pos && i < arr.Length; i++)
         {
             result[index] = arr[i];
             index++;
         }
 
-        for (int i = 0;
-            i < ins.Length; i++)
+        for (int i = 0; i < ins.Length; i++)
         {
             result[index] = ins[i];
             index++;
         }
 
-        for (int i = pos;
-            i < arr.Length; i++)
+        for (int i = pos; i < arr.Length; i++)
         {
             result[index] = arr[i];
             index++;
@@ -264,26 +234,20 @@ internal class TaskSolver
         return result;
     }
 
-    internal int[] ReverseBack(
-        int[] arr)
+    public int[] ReverseBack(int[] arr)
     {
-        int[] result =
-            new int[arr.Length];
-        for (int i = 0;
-            i < arr.Length; i++)
+        int[] result = new int[arr.Length];
+        for (int i = 0; i < arr.Length; i++)
         {
-            result[i] =
-                arr[arr.Length - 1 - i];
+            result[i] = arr[arr.Length - 1 - i];
         }
         return result;
     }
 
-    internal int[] FindAll(
-        int[] arr, int x)
+    public int[] FindAll(int[] arr, int x)
     {
         int count = 0;
-        for (int i = 0;
-            i < arr.Length; i++)
+        for (int i = 0; i < arr.Length; i++)
         {
             if (arr[i] == x)
             {
@@ -291,11 +255,9 @@ internal class TaskSolver
             }
         }
 
-        int[] result =
-            new int[count];
+        int[] result = new int[count];
         int index = 0;
-        for (int i = 0;
-            i < arr.Length; i++)
+        for (int i = 0; i < arr.Length; i++)
         {
             if (arr[i] == x)
             {
