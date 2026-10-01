@@ -9,8 +9,10 @@ internal class Program
 
         while (true)
         {
-            Console.WriteLine("\nЛабораторная работа №1");
-            Console.WriteLine("Выберите задачу (1-20) или 0 для выхода:");
+            Console.WriteLine(
+                "\nЛабораторная работа №1");
+            Console.WriteLine(
+                "Выберите задачу (1-20) или 0 для выхода:");
             choice = ReadInt();
 
             switch (choice)
@@ -41,7 +43,9 @@ internal class Program
                 case 20: solver.RunTask20(); break;
 
                 default:
-                    Console.WriteLine("Неверный номер задачи. Введите число от 0 до 20.");
+                    Console.WriteLine(
+                        "Неверный номер задачи. " +
+                        "Введите число от 0 до 20.");
                     break;
             }
         }
@@ -80,7 +84,8 @@ internal class Program
         int b = ReadInt();
         Console.Write("Введите num: ");
         int num = ReadInt();
-        Console.WriteLine("Результат: " + IsInRange(a, b, num));
+        Console.WriteLine(
+            "Результат: " + IsInRange(a, b, num));
     }
 
     private void RunTask5()
@@ -92,7 +97,8 @@ internal class Program
         int b = ReadInt();
         Console.Write("Введите c: ");
         int c = ReadInt();
-        Console.WriteLine("Результат: " + IsEqual(a, b, c));
+        Console.WriteLine(
+            "Результат: " + IsEqual(a, b, c));
     }
 
     private void RunTask6()
@@ -120,7 +126,8 @@ internal class Program
         int y = ReadInt();
         Console.Write("Введите z: ");
         int z = ReadInt();
-        Console.WriteLine("Результат: " + Max3(x, y, z));
+        Console.WriteLine(
+            "Результат: " + Max3(x, y, z));
     }
 
     private void RunTask9()
@@ -219,21 +226,24 @@ internal class Program
     {
         Console.WriteLine("\nЗадача 11: Числа подряд");
         Console.Write("Введите число x: ");
-        Console.WriteLine("Результат: \"" + ListNums(ReadInt()) + "\"");
+        Console.WriteLine(
+            "Результат: \"" + ListNums(ReadInt()) + "\"");
     }
 
     private void RunTask12()
     {
         Console.WriteLine("\nЗадача 12: Четные числа");
         Console.Write("Введите число x: ");
-        Console.WriteLine("Результат: \"" + Chet(ReadInt()) + "\"");
+        Console.WriteLine(
+            "Результат: \"" + Chet(ReadInt()) + "\"");
     }
 
     private void RunTask13()
     {
         Console.WriteLine("\nЗадача 13: Длина числа");
         Console.Write("Введите число x: ");
-        Console.WriteLine("Результат: " + NumLen(ReadLong()));
+        Console.WriteLine(
+            "Результат: " + NumLen(ReadLong()));
     }
 
     private void RunTask14()
@@ -245,59 +255,82 @@ internal class Program
 
     private void RunTask15()
     {
-        Console.WriteLine("\nЗадача 15: Правый треугольник");
+        Console.WriteLine(
+            "\nЗадача 15: Правый треугольник");
         Console.Write("Введите высоту x: ");
         RightTriangle(ReadInt());
     }
 
     private void RunTask16()
     {
-        Console.WriteLine("\nЗадача 16: Поиск первого значения");
-        Console.WriteLine("Введите элементы массива через пробел:");
+        Console.WriteLine(
+            "\nЗадача 16: Поиск первого значения");
+        Console.WriteLine(
+            "Введите элементы массива через пробел:");
         int[] arr = ReadIntArray();
         Console.Write("Введите искомое число x: ");
         int x = ReadInt();
-        Console.WriteLine("Результат: " + FindFirst(arr, x));
+        Console.WriteLine(
+            "Результат: " + FindFirst(arr, x));
     }
 
     private void RunTask17()
     {
-        Console.WriteLine("\nЗадача 17: Поиск максимального по модулю");
-        Console.WriteLine("Введите элементы массива через пробел:");
+        Console.WriteLine(
+            "\nЗадача 17: Поиск максимального " +
+            "по модулю");
+        Console.WriteLine(
+            "Введите элементы массива через пробел:");
         int[] arr = ReadIntArray();
-        Console.WriteLine("Результат: " + MaxAbs(arr));
+        Console.WriteLine(
+            "Результат: " + MaxAbs(arr));
     }
 
     private void RunTask18()
     {
-        Console.WriteLine("\nЗадача 18: Добавление массива в массив");
-        Console.WriteLine("Введите элементы исходного массива arr через пробел:");
+        Console.WriteLine(
+            "\nЗадача 18: Добавление массива " +
+            "в массив");
+        Console.WriteLine(
+            "Введите элементы исходного массива " +
+            "arr через пробел:");
         int[] arr = ReadIntArray();
-        Console.WriteLine("Введите элементы массива ins для вставки через пробел:");
+        Console.WriteLine(
+            "Введите элементы массива ins для " +
+            "вставки через пробел:");
         int[] ins = ReadIntArray();
         Console.Write("Введите позицию pos: ");
         int pos = ReadInt();
-        Console.WriteLine("Результат: " + ArrayToString(Add(arr, ins, pos)));
+        Console.WriteLine(
+            "Результат: " +
+            ArrayToString(Add(arr, ins, pos)));
     }
 
     private void RunTask19()
     {
-        Console.WriteLine("\nЗадача 19: Возвратный реверс");
-        Console.WriteLine("Введите элементы массива через пробел:");
+        Console.WriteLine(
+            "\nЗадача 19: Возвратный реверс");
+        Console.WriteLine(
+            "Введите элементы массива через пробел:");
         int[] arr = ReadIntArray();
-        Console.WriteLine("Результат: " + ArrayToString(ReverseBack(arr)));
+        Console.WriteLine(
+            "Результат: " +
+            ArrayToString(ReverseBack(arr)));
     }
 
     private void RunTask20()
     {
-        Console.WriteLine("\nЗадача 20: Все вхождения");
-        Console.WriteLine("Введите элементы массива через пробел:");
+        Console.WriteLine(
+            "\nЗадача 20: Все вхождения");
+        Console.WriteLine(
+            "Введите элементы массива через пробел:");
         int[] arr = ReadIntArray();
         Console.Write("Введите искомое число x: ");
         int x = ReadInt();
-        Console.WriteLine("Результат: " + ArrayToString(FindAll(arr, x)));
+        Console.WriteLine(
+            "Результат: " +
+            ArrayToString(FindAll(arr, x)));
     }
-    
 
     private string ListNums(int x)
     {
@@ -338,7 +371,10 @@ internal class Program
         for (int i = 0; i < x; i++)
         {
             string row = "";
-            for (int j = 0; j < x; j++) row += "*";
+            for (int j = 0; j < x; j++)
+            {
+                row += "*";
+            }
             Console.WriteLine(row);
         }
     }
@@ -348,15 +384,20 @@ internal class Program
         for (int i = 1; i <= x; i++)
         {
             string spaces = "";
-            for (int j = 0; j < x - i; j++) spaces += " ";
-            
+            for (int j = 0; j < x - i; j++)
+            {
+                spaces += " ";
+            }
+
             string stars = "";
-            for (int j = 0; j < i; j++) stars += "*";
-            
+            for (int j = 0; j < i; j++)
+            {
+                stars += "*";
+            }
+
             Console.WriteLine(spaces + stars);
         }
     }
-    
 
     private int FindFirst(int[] arr, int x)
     {
@@ -369,7 +410,10 @@ internal class Program
 
     private int MaxAbs(int[] arr)
     {
-        if (arr == null || arr.Length == 0) return 0;
+        if (arr == null || arr.Length == 0)
+        {
+            return 0;
+        }
         int maxVal = arr[0];
         int maxAbsVal = Abs(arr[0]);
 
@@ -387,21 +431,22 @@ internal class Program
 
     private int[] Add(int[] arr, int[] ins, int pos)
     {
-        int[] result = new int[arr.Length + ins.Length];
+        int[] result =
+            new int[arr.Length + ins.Length];
         int index = 0;
-        
+
         for (int i = 0; i < pos && i < arr.Length; i++)
         {
             result[index] = arr[i];
             index++;
         }
-        
+
         for (int i = 0; i < ins.Length; i++)
         {
             result[index] = ins[i];
             index++;
         }
-        
+
         for (int i = pos; i < arr.Length; i++)
         {
             result[index] = arr[i];
@@ -441,7 +486,6 @@ internal class Program
         }
         return result;
     }
-    
 
     private static double ReadDouble()
     {
@@ -450,8 +494,13 @@ internal class Program
         while (true)
         {
             input = Console.ReadLine();
-            if (double.TryParse(input, out result)) return result;
-            Console.Write("Некорректный ввод. Введите число: ");
+            if (double.TryParse(input, out result))
+            {
+                return result;
+            }
+            Console.Write(
+                "Некорректный ввод. " +
+                "Введите число: ");
         }
     }
 
@@ -460,8 +509,16 @@ internal class Program
         while (true)
         {
             string input = Console.ReadLine();
-            if (input != null && input.Length == 1 && input[0] >= '0' && input[0] <= '9') return input[0];
-            Console.Write("Некорректный ввод. Введите одну цифру (0-9): ");
+            if (input != null
+                && input.Length == 1
+                && input[0] >= '0'
+                && input[0] <= '9')
+            {
+                return input[0];
+            }
+            Console.Write(
+                "Некорректный ввод. " +
+                "Введите одну цифру (0-9): ");
         }
     }
 
@@ -472,11 +529,16 @@ internal class Program
         while (true)
         {
             input = Console.ReadLine();
-            if (int.TryParse(input, out result)) return result;
-            Console.Write("Некорректный ввод. Введите целое число: ");
+            if (int.TryParse(input, out result))
+            {
+                return result;
+            }
+            Console.Write(
+                "Некорректный ввод. " +
+                "Введите целое число: ");
         }
     }
-    
+
     private static long ReadLong()
     {
         string input;
@@ -484,11 +546,16 @@ internal class Program
         while (true)
         {
             input = Console.ReadLine();
-            if (long.TryParse(input, out result)) return result;
-            Console.Write("Некорректный ввод. Введите целое число: ");
+            if (long.TryParse(input, out result))
+            {
+                return result;
+            }
+            Console.Write(
+                "Некорректный ввод. " +
+                "Введите целое число: ");
         }
     }
-    
+
     private static int[] ReadIntArray()
     {
         while (true)
@@ -497,13 +564,21 @@ internal class Program
             string input = Console.ReadLine();
             if (string.IsNullOrWhiteSpace(input))
             {
-                Console.WriteLine("Массив не может быть пустым. Попробуйте снова.");
+                Console.WriteLine(
+                    "Массив не может быть пустым. " +
+                    "Попробуйте снова.");
                 continue;
             }
 
             string[] parts = input.Split(' ');
             int count = 0;
-            foreach (string part in parts) { if (!string.IsNullOrWhiteSpace(part)) count++; }
+            foreach (string part in parts)
+            {
+                if (!string.IsNullOrWhiteSpace(part))
+                {
+                    count++;
+                }
+            }
 
             int[] result = new int[count];
             int index = 0;
@@ -513,7 +588,8 @@ internal class Program
             {
                 if (!string.IsNullOrWhiteSpace(part))
                 {
-                    if (!int.TryParse(part, out result[index]))
+                    if (!int.TryParse(
+                        part, out result[index]))
                     {
                         isValid = false;
                         break;
@@ -523,18 +599,27 @@ internal class Program
             }
 
             if (isValid) return result;
-            Console.WriteLine("Некорректный ввод. Введите целые числа через пробел.");
+            Console.WriteLine(
+                "Некорректный ввод. " +
+                "Введите целые числа " +
+                "через пробел.");
         }
     }
-    
+
     private static string ArrayToString(int[] arr)
     {
-        if (arr == null || arr.Length == 0) return "[]";
+        if (arr == null || arr.Length == 0)
+        {
+            return "[]";
+        }
         string result = "[";
         for (int i = 0; i < arr.Length; i++)
         {
             result += arr[i];
-            if (i < arr.Length - 1) result += ", ";
+            if (i < arr.Length - 1)
+            {
+                result += ", ";
+            }
         }
         result += "]";
         return result;
