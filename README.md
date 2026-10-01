@@ -106,7 +106,8 @@ x = '3'
 
 ### Тестирование
 
-<img src="images/task03.png" width="600" alt="Задача 3 — Двузначное число">
+<img src="images/task03_1.png" width="600" alt="Задача 3 — Тестирование 1">
+<img src="images/task03_2.png" width="600" alt="Задача 3 — Тестирование 2">
 
 ---
 
@@ -418,7 +419,8 @@ x = '3'
 
 ### Тестирование
 
-<img src="images/task16.png" width="600" alt="Задача 16 — Поиск первого значения">
+<img src="images/task16_1.png" width="600" alt="Задача 16 — Тестирование 1">
+<img src="images/task16_2.png" width="600" alt="Задача 16 — Тестирование 2">
 
 ---
 
