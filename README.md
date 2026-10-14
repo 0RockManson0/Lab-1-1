@@ -1,15 +1,6 @@
 # Лабораторная работа №1 — C#
 
 **Автор:** Чичарин Денис, ИТ-2  
-**Дисциплина:** Программирование на C#  
-**Ссылка на GitHub:** [https://github.com/0RockManson0/Lab-1-1.git](https://github.com/0RockManson0/Lab-1-1.git)
-
-**Файлы проекта:**
-- `main.cs` — точка входа (запуск через `main.cs`)
-- `TaskSolver.cs` — реализация методов
-
-**Запуск:** через `main.cs`
-
 ---
 
 ## Как запустить
@@ -510,8 +501,3 @@ x = '3'
 <img src="images/task20.png" width="600" alt="Задача 20 — Все вхождения">
 
 ---
-
-## Ссылка
-
-GitHub: [https://github.com/0RockManson0/Lab-1-1.git](https://github.com/0RockManson0/Lab-1-1.git)  
-Запуск через `main.cs`
